@@ -23,12 +23,12 @@ public class ChessPosition {
         return row;
     }
 
-    protected Position toPosition() {  //calcula a coordenada do posição na matriz
+    protected Position toPosition() {                                 //calcula a coordenada do posição na matriz
         return new Position(8 - row, column - 'a');
     }
 
     protected static ChessPosition fromPosition(Position position) {
-        return new ChessPosition((char)('a' - position.getColumn()), 8 - position.getRow());
+        return new ChessPosition((char)('a' + position.getColumn()), 8 - position.getRow());  //'a'+????
     }
 
     @Override
@@ -36,3 +36,4 @@ public class ChessPosition {
         return "" + column + row;
     }
 }
+

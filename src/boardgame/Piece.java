@@ -1,5 +1,7 @@
 package boardgame;
 
+import chess.ChessPosition;
+
 public abstract class Piece {
 
     protected Position position;
@@ -10,7 +12,6 @@ public abstract class Piece {
     }
 
     protected Board getBoard() {
-
         return board;
     }
 
